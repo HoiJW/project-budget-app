@@ -223,4 +223,17 @@ html {
 
 body {
   background: rgb(235, 196, 196);
+}
+
+.budget-cards {
+  border: 1px solid black;
+  width: 500px;
+  display: flex;
+}
+
+.titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1%;
 }/*# sourceMappingURL=App.css.map */
