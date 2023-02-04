@@ -3,7 +3,7 @@ function BudgetCards( { name , amount , max}){
         <div className='budget-cards'>
             <div className="titles">
             <h2>{name}</h2>
-            <h3>${amount} / ${max}</h3>
+            <h3>${amount} / <span className="max">${max}</span> </h3>
             </div>
         </div>
     )

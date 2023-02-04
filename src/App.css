@@ -229,6 +229,7 @@ body {
   border: 1px solid black;
   width: 500px;
   display: flex;
+  justify-content: center;
 }
 
 .titles {
@@ -236,4 +237,9 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 1%;
+  width: 90%;
+}
+
+.max {
+  font-size: 0.9rem;
 }/*# sourceMappingURL=App.css.map */

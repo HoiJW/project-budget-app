@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import firebase from './firebase';
 // to get the database working must import firebase modules
 import { getDatabase, onValue, push, remove, ref} from 'firebase/database';
-import BudgetCards from './BudgetCards';
+import BudgetCards from './Components/BudgetCards';
 function App() {
   return(
     <div>
