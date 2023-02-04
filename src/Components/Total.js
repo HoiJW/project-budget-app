@@ -5,7 +5,7 @@ function Total( {sums, max} ){
         
         <div className='total'>
            <div className="titles">
-                <h2>Total</h2>
+                <h2>Total Expenses</h2>
                 <h3>${sums} / <span className="max">${max}</span></h3>
             </div>
         </div>

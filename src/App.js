@@ -3,17 +3,25 @@ import { useState, useEffect } from 'react';
 import firebase from './firebase';
 // to get the database working must import firebase modules
 import { getDatabase, onValue, push, remove, ref} from 'firebase/database';
-// import BudgetCards from './Components/BudgetCards';
 import Total from './Components/Total';
 function App() {
-  //create Budget state that will store our database info
+  //create expense state that will store our expenses info
   const [expense, setExpenes] = useState([]);
+  //create buget state to hold our budget info
+  const[budget, setBudget] = useState(0);
   // get useEffect fucntion to run side effects on component mounts
   
   // create a statful value thats bound to input
   const[userInput, setUserInput] = useState('');
-  const[title, setTitle] = useState('');
+  //set up numbers only rescurtion 
   const [val, setVal] = useState(0);
+  
+  const[title, setTitle] = useState('');
+  
+  const[userBudget, setUserBudget] = useState('');
+  //set up numbers only rescurtion and not insync with val for expense
+  const [v, setV] = useState(0);
+  
   const[total, setTotal] = useState(0);
 
   //add event listener that fires everytune there is a change in our input
@@ -26,6 +34,10 @@ function App() {
     setTitle(event.target.value);
   }
 
+  const handleBudget = (event) => {
+    setUserBudget(event.target.value);
+    setV((v) => (event.target.validity.valid ? event.target.value :v))
+  }
   
 
   const handleSubmit = (event) => {
@@ -40,6 +52,17 @@ function App() {
     setUserInput('');
   }
 
+  const handleSubmitBudget = (event) => {
+    //get the info from userinput STATE
+    event.preventDefault();
+    console.log(userBudget);
+    //send it off to firebase using push function
+    const database = getDatabase(firebase);
+    const dbRef = ref(database);
+    const budget = {userBudget:userBudget};
+    push(dbRef, budget);
+    setUserBudget('');
+  }
   
   
   const handleRemove = (expenseId) => {
@@ -62,7 +85,6 @@ function App() {
       // set Budget stat to reflect database info
       const newState = [];
       for (let key in data) {
-        console.log(data[key]['userInput']);
         newState.push(
           {key:key, amount: parseInt(data[key]['userInput']),
           title:data[key]['title']
@@ -84,20 +106,27 @@ function App() {
       let newTotal = 0;
       newState.forEach((object) => {
         newTotal = newTotal + object['amount']
-        console.log(newTotal);
+        // console.log(newTotal);
       })
 
-      let newBudget = 0;
-      newState.forEach((object) => {
-        newTotal = newBudget + object['amount']
-        console.log(newTotal);
-      })
+      const newBudget = [];
+      for (let key in data) {
+        console.log(newBudget);
+        newBudget.push(
+          {key:key, amount: parseInt(data[key]['userBudget']),
+          title:data[key]['title']
+        }
+          
+        );
+        
+      }
       setExpenes(newState);
       setTotal(newTotal);
     });
-  
+    
   
   },[]);
+
   //current we have add expense ✔️
   //need to rescrict to numbers only✔️
   //need to make each expense into own div and can be remove "onClick"✔️
@@ -116,30 +145,48 @@ function App() {
   return(
     <div className="main">
       <h1>My Budgets</h1>
-      <form action="submit">
-        <label htmlFor="newExpense"></label>
+      <div className='adding-section'>
+      <form className='left' action="submit">
+        <label htmlFor="newExpense">Amount:</label>
         <input onChange={handleInput} 
-        type="text" 
+        type="text"
+        placeholder="$100"
         id="newExpense"
         pattern='[0-9]*' 
         value={(userInput, val)}
+        
         />
         
-        <label htmlFor="newTitle"></label>
+        <label htmlFor="newTitle">Item:</label>
         <input onChange={handleTitle} 
-        type="text" 
+        type="text"
+        placeholder="e.g entertainments" 
         id="newTitle"
         value={(title)}
         />
         <button onClick={handleSubmit}>Add Expense</button>
       </form>
       
+      <form className='right' action="submit">
+        <label htmlFor="newBudget">Budget:</label>
+        <input onChange={handleBudget} 
+        type="text" 
+        id="newBudget"
+        placeholder="$1000" 
+        pattern='[0-9]*' 
+        value={(userBudget,v)}
+        />
+        
+        <button onClick={handleSubmitBudget}>Add Budget</button>
+      </form>
+      </div>
+      
       <div className='contents'>
           {expense.map ( (expense) => {
               return (
                 <div className='expense-cards'>
                 <div key={expense.key}>
-                  <h3>{expense.title}</h3>
+                  <h2>{expense.title}</h2>
                   <p>${expense.amount}</p>
                   <button onClick={() => {handleRemove(expense.key)}}>
                   remove

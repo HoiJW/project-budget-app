@@ -224,10 +224,12 @@ html {
 }
 
 body {
-  background: rgb(255, 210, 180);
+  background: rgb(0, 0, 0);
 }
 
-button {
+body,
+button,
+input {
   font-family: "Shadows Into Light", cursive;
 }
 
@@ -235,7 +237,8 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 2%;
+  margin: 1% auto;
+  width: 50%;
 }
 
 .expense-cards {
@@ -258,11 +261,75 @@ button {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  font-family: "Shadows Into Light", cursive;
+  background-image: url(../assets/backgroud-main.jpg);
+  background-size: auto;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
 }
 
-.max {
-  font-size: 0.9rem;
+.adding-section {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+}
+
+form {
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  justify-content: end;
+  background: rgb(252, 233, 148);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+}
+form button {
+  margin-top: 2%;
+  height: 40px;
+}
+
+label {
+  padding-top: 24px;
+  font-size: 1.5rem;
+}
+
+input {
+  width: 50%;
+  background: none;
+  border: none;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  padding: 5% 0% 0% 1%;
+  margin-bottom: 2%;
+  outline: none;
+}
+
+h1 {
+  font-size: 5rem;
+  background-color: rgba(255, 255, 255, 0.959);
+  width: 500px;
+  margin: 2% auto;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 1.8rem;
+  text-decoration: underline;
 }
 
 .progress-bar {
@@ -285,4 +352,45 @@ button {
   box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+  background: rgb(185, 255, 217);
+  font-size: 2rem;
+  transition: 1s;
+}
+.total .max {
+  font-size: 2rem;
+}
+
+button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+button:hover {
+  box-shadow: rgba(3, 3, 3, 0.3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
 }/*# sourceMappingURL=App.css.map */
