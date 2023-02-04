@@ -43,7 +43,6 @@ function App() {
   const handleSubmit = (event) => {
     //get the info from userinput STATE
     event.preventDefault();
-    console.log(userInput);
     //send it off to firebase using push function
     const database = getDatabase(firebase);
     const dbRef = ref(database);
@@ -88,20 +87,20 @@ function App() {
         newState.push(
           {key:key, amount: parseInt(data[key]['userInput']),
           title:data[key]['title']
+          // 1. make an object {}
+          // 2. build a property called "key" that has a value of the object's key
+          // 3. build a property called "name" that has a value of the key's value
+          // OR
+          // turn this:
+          //   -NMjX1ECjIWGzAx7Beps: "By Crom!"
+          // into this:
+          //  {
+          //   key: -NMjX1ECjIWGzAx7Beps,
+          //   name: "By Crom!"
+          //  }
         }
           
         );
-        // 1. make an object {}
-        // 2. build a property called "key" that has a value of the object's key
-        // 3. build a property called "name" that has a value of the key's value
-        // OR
-        // turn this:
-        //   -NMjX1ECjIWGzAx7Beps: "By Crom!"
-        // into this:
-        //  {
-        //   key: -NMjX1ECjIWGzAx7Beps,
-        //   name: "By Crom!"
-        //  }
       }
       let newTotal = 0;
       newState.forEach((object) => {
@@ -110,17 +109,18 @@ function App() {
       })
 
       const newBudget = [];
-      for (let key in data) {
+      for (let budgetkey in data) {
         console.log(newBudget);
         newBudget.push(
-          {key:key, amount: parseInt(data[key]['userBudget']),
-          title:data[key]['title']
+          {key:budgetkey ,budget:parseInt(data[budgetkey]['userBudget'])
         }
           
         );
         
       }
+      
       setExpenes(newState);
+      setBudget(newBudget);
       setTotal(newTotal);
     });
     
@@ -168,7 +168,7 @@ function App() {
       </form>
       
       <form className='right' action="submit">
-        <label htmlFor="newBudget">Budget:</label>
+        <label htmlFor="newBudget">Your Budget:</label>
         <input onChange={handleBudget} 
         type="text" 
         id="newBudget"
@@ -177,7 +177,7 @@ function App() {
         value={(userBudget,v)}
         />
         
-        <button onClick={handleSubmitBudget}>Add Budget</button>
+        {/* <button onClick={handleSubmitBudget}>Add Budget</button> */}
       </form>
       </div>
       
@@ -198,7 +198,7 @@ function App() {
       })}
       </div>
 
-      <Total sums={total} max={1500}/>
+      <Total sums={total} max={userBudget}/>
       
       {/* <div className='budget-cards'>
             <div className="titles">

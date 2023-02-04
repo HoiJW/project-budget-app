@@ -308,6 +308,7 @@ input {
   padding: 5% 0% 0% 1%;
   margin-bottom: 2%;
   outline: none;
+  font-size: 1.3rem;
 }
 
 h1 {
@@ -330,6 +331,22 @@ h2 {
 p {
   font-size: 1.8rem;
   text-decoration: underline;
+}
+
+.right {
+  background-color: rgb(179, 189, 245);
+  justify-content: center;
+}
+.right label {
+  font-size: 1.8rem;
+  color: rgb(255, 65, 59);
+  font-weight: 600;
+}
+.right input {
+  padding-left: 10px;
+  width: 20%;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .progress-bar {
