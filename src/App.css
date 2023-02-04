@@ -226,10 +226,11 @@ body {
 }
 
 .budget-cards {
+  margin: 0 auto;
   border: 1px solid black;
   width: 500px;
-  display: flex;
-  justify-content: center;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .titles {
@@ -238,8 +239,28 @@ body {
   justify-content: space-between;
   padding: 1%;
   width: 90%;
+  margin: 0 auto;
 }
 
 .max {
   font-size: 0.9rem;
+}
+
+.progress-bar {
+  border: 1px solid black;
+  height: 20px;
+  margin: 3% 3% 3% 3%;
+  border-radius: 25px;
+}
+
+.filling {
+  margin-bottom: 1%;
+}
+
+.total {
+  margin: 2% auto;
+  border: 1px solid black;
+  width: 500px;
+  border-radius: 10px;
+  padding: 10px;
 }/*# sourceMappingURL=App.css.map */
