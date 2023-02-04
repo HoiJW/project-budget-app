@@ -1,8 +1,11 @@
 .budget-cards{
+    margin: 0 auto;
     border: 1px solid black;
     width: 500px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
 }
 .titles{
     display: flex;
