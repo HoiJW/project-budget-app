@@ -14,7 +14,8 @@ function App() {
   const[userInput, setUserInput] = useState('');
   const[title, setTitle] = useState('');
   const [val, setVal] = useState(0);
-  const[total, setTotal] = useState(0)
+  const[total, setTotal] = useState(0);
+
   //add event listener that fires everytune there is a change in our input
 
   const handleInput = (event) => {
@@ -83,6 +84,12 @@ function App() {
       let newTotal = 0;
       newState.forEach((object) => {
         newTotal = newTotal + object['amount']
+        console.log(newTotal);
+      })
+
+      let newBudget = 0;
+      newState.forEach((object) => {
+        newTotal = newBudget + object['amount']
         console.log(newTotal);
       })
       setBudget(newState);
