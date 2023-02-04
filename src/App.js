@@ -77,28 +77,40 @@ function App() {
   
   },[]);
   return(
-    <div className="">
+    <div className="titles">
       <h1>My Budgets</h1>
       <form action="submit">
         <label htmlFor="newBudget"></label>
         <input onChange={handleInput} type="text" id="newBudget" value={userInput} />
-        <button onClick={handleSubmit}>Add Budget</button>
+        <button onClick={handleSubmit}>Add Expense</button>
       </form>
       
       
-      <ul>
+      <div className='budget-cards'>
         {budget.map ( (budget) => {
           return (
-            <li key={budget.key}>
+            <div key={budget.key}>
               <p>${budget.amount}</p>
               <button onClick={() => {handleRemove(budget.key)}}>
               remove
               </button>
-            </li>
+            </div>
           )
 
         })}
-      </ul>
+      </div>
+
+      <Total />
+      
+      {/* <div className='budget-cards'>
+            <div className="titles">
+                <h2>{name}</h2>
+                <h3>${amount} / <span className="max">${max}</span> </h3>
+            </div>
+            
+            <div className="progress-bar">
+            </div>
+        </div> */}
     </div>
     // <div>
     //   <h1>My Budgets</h1>

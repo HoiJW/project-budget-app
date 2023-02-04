@@ -228,14 +228,14 @@ body {
 .budget-cards {
   margin: 0 auto;
   border: 1px solid black;
-  width: 500px;
+  width: 400px;
   border-radius: 10px;
   padding: 10px;
 }
 
 .titles {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   padding: 1%;
   width: 90%;
@@ -260,7 +260,7 @@ body {
 .total {
   margin: 2% auto;
   border: 1px solid black;
-  width: 500px;
+  width: 400px;
   border-radius: 10px;
   padding: 10px;
 }/*# sourceMappingURL=App.css.map */
