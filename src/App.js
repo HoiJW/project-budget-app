@@ -7,7 +7,7 @@ import { getDatabase, onValue, push, remove, ref} from 'firebase/database';
 import Total from './Components/Total';
 function App() {
   //create Budget state that will store our database info
-  const [budget, setBudget] = useState([]);
+  const [expense, setExpenes] = useState([]);
   // get useEffect fucntion to run side effects on component mounts
   
   // create a statful value thats bound to input
@@ -42,9 +42,9 @@ function App() {
 
   
   
-  const handleRemove = (budgetId) => {
+  const handleRemove = (expenseId) => {
     const database = getDatabase(firebase);
-    const dbRef = ref(database, `${budgetId}`);
+    const dbRef = ref(database, `${expenseId}`);
     remove(dbRef);
   }
   
@@ -92,7 +92,7 @@ function App() {
         newTotal = newBudget + object['amount']
         console.log(newTotal);
       })
-      setBudget(newState);
+      setExpenes(newState);
       setTotal(newTotal);
     });
   
@@ -117,10 +117,10 @@ function App() {
     <div className="main">
       <h1>My Budgets</h1>
       <form action="submit">
-        <label htmlFor="newBudget"></label>
+        <label htmlFor="newExpense"></label>
         <input onChange={handleInput} 
         type="text" 
-        id="newBudget"
+        id="newExpense"
         pattern='[0-9]*' 
         value={(userInput, val)}
         />
@@ -135,13 +135,13 @@ function App() {
       </form>
       
       <div className='contents'>
-          {budget.map ( (budget) => {
+          {expense.map ( (expense) => {
               return (
-                <div className='budget-cards'>
-                <div key={budget.key}>
-                  <h3>{budget.title}</h3>
-                  <p>${budget.amount}</p>
-                  <button onClick={() => {handleRemove(budget.key)}}>
+                <div className='expense-cards'>
+                <div key={expense.key}>
+                  <h3>{expense.title}</h3>
+                  <p>${expense.amount}</p>
+                  <button onClick={() => {handleRemove(expense.key)}}>
                   remove
                   </button>
                 </div>
