@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import firebase from './firebase';
 // to get the database working must import firebase modules
 import { getDatabase, onValue, push, remove, ref} from 'firebase/database';
-import BudgetCards from './Components/BudgetCards';
+// import BudgetCards from './Components/BudgetCards';
 import Total from './Components/Total';
 function App() {
   //create books state that will store our database info
@@ -100,7 +100,7 @@ function App() {
         })}
       </div>
 
-      <Total />
+      <Total sums={150} max={1000}/>
       
       {/* <div className='budget-cards'>
             <div className="titles">
