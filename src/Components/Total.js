@@ -13,9 +13,9 @@ function Total( {sums, max} ){
         <div className={bgc}>
            <div className="titles">
                 <h2>Total Expenses</h2>
-                <p className="smile">😊</p>
-                <p className="meh">🤨</p>
-                <p className="sad">😥</p>
+                <p className="smile">😊 yay~!</p>
+                <p className="meh">🤨 hmmmm~?</p>
+                <p className="sad">😥 OH NO!</p>
 
                 <h3>${sums} / <span className="max">${max}</span></h3>
             </div>

@@ -19,7 +19,7 @@ function App() {
   
   const[title, setTitle] = useState('');
   
-  const[userBudget, setUserBudget] = useState('1000');
+  const[userBudget, setUserBudget] = useState('2000');
   //set up numbers only rescurtion and not insync with val for expense
   const [v, setV] = useState(0);
   
@@ -189,7 +189,7 @@ function App() {
                 <div key={expense.key}>
                   <h2>{expense.title}</h2>
                   <p>${expense.amount}</p>
-                  <button onClick={() => {handleRemove(expense.key)}}>
+                  <button onClick={() => {if (window.confirm('Are you sure you wish to delete this item?'))handleRemove(expense.key)}}>
                   remove
                   </button>
                 </div>
