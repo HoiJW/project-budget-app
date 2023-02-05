@@ -39,8 +39,10 @@
     margin: 0 auto;
 }
 form{
+    margin: 1%;
+    padding: 1%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     background: rgb(252, 233, 148);
     border: 2px solid rgb(0, 0, 0);
     border-radius: 15px;
