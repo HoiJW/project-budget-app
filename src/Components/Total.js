@@ -1,6 +1,7 @@
 function Total( {sums, max} ){
     
-    
+    //color change useState
+    // const [bgc, setBgc] = useState("green")
     return(
         
         <div className='total'>
