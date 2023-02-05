@@ -43,7 +43,7 @@ function App() {
   const handleSubmit = (event) => {
     //get the info from userinput STATE
     event.preventDefault();
-    if (event.target.value === "") {
+    if (userInput === "") {
       alert("you've submited an empty amount");
     }
     //send it off to firebase using push function
