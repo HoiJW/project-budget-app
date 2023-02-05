@@ -160,7 +160,7 @@ function App() {
         <label htmlFor="newTitle">Item:</label>
         <input onChange={handleTitle} 
         type="text"
-        placeholder="e.g entertainments" 
+        placeholder="e.g Food" 
         id="newTitle"
         value={(title)}
         />

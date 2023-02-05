@@ -1,13 +1,14 @@
 .contents{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 1% auto;
     width: 50%;
     
 }
 
 .expense-cards{
+    margin-top: 15px;
     border: 3px solid black;
     width: auto;
     border-radius: 10px;
@@ -15,8 +16,8 @@
     display: flex;
     background-color: white;
     box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
--webkit-box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
 }
 .main{
     display: flex;
@@ -35,8 +36,9 @@
 }
 .adding-section{
     display: flex;
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 form{
     margin: 1%;
@@ -66,7 +68,7 @@ input{
     border-bottom-style: none;
     border-bottom-width: medium;
     border-bottom: 2px solid rgb(0, 0, 0);
-    padding: 5% 0% 0% 1%;
+    padding: 2.5% 0% 0% 1%;
     margin-bottom: 2%;
     margin-right: 1%;
     outline: none;
@@ -95,7 +97,8 @@ p{
 .right{
     background-color: rgb(179, 189, 245) ;
     justify-content: center;
-    
+    flex-basis: 30%;
+    padding-top: 0;
     label{
         font-size: 1.8rem;
         color: rgb(255, 65, 59);
@@ -108,3 +111,58 @@ p{
         font-weight: 700;
     }
 }
+.left{
+    flex-basis: 55%;
+    margin-left: 10%;
+}
+
+
+  @media (max-width: 1200px) {
+    .contents{
+        width: 75%;
+    }
+  }
+
+
+  @media (max-width: 750px) {
+    h1{
+        width: 90%;
+        font-size: 4.5rem;
+    }
+    .contents{
+        width: auto;
+    }
+    .expense-cards{
+        margin: 10px;
+    }
+    .left{
+        flex-basis: 90%;
+        margin: 10px auto;
+    }
+    .right{
+        flex-basis: 60%;
+        margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 550px) {
+    h1{
+        font-size: 3.5rem;
+    }
+    .left{
+        flex-direction: column;
+        flex-basis: 60%;
+        label{
+            padding: 0;
+        }
+        input{
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+    form{
+        button{
+            margin: 5% auto
+        }
+    }
+  }
