@@ -4,6 +4,7 @@ import firebase from './firebase';
 // to get the database working must import firebase modules
 import { getDatabase, onValue, push, remove, ref} from 'firebase/database';
 import Total from './Components/Total';
+
 function App() {
   //create expense state that will store our expenses info
   const [expense, setExpenes] = useState([]);
@@ -42,6 +43,9 @@ function App() {
   const handleSubmit = (event) => {
     //get the info from userinput STATE
     event.preventDefault();
+    if (event.target.value === "") {
+      alert("you've submited an empty amount");
+    }
     //send it off to firebase using push function
     const database = getDatabase(firebase);
     const dbRef = ref(database);
@@ -108,16 +112,16 @@ function App() {
         // console.log(newTotal);
       })
 
-      const newBudget = [];
-      for (let budgetkey in data) {
-        console.log(newBudget);
-        newBudget.push(
-          {key:budgetkey ,budget:parseInt(data[budgetkey]['userBudget'])
-        }
+      // const newBudget = [];
+      // for (let budgetkey in data) {
+      //   console.log(newBudget);
+      //   newBudget.push(
+      //     {key:budgetkey ,budget:parseInt(data[budgetkey]['userBudget'])
+      //   }
           
-        );
+      //   );
         
-      }
+      // }
       
       setExpenes(newState);
       // setBudget(newBudget);
@@ -138,9 +142,6 @@ function App() {
   //make a variable "sum" to sum up the current expenses
 
   // scretch goal , adding progress bar to Total div
-
-  
-
   
   return(
     <div className="main">

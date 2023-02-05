@@ -239,6 +239,7 @@ input {
   justify-content: space-between;
   margin: 1% auto;
   width: 50%;
+  transition: 1s;
 }
 
 .expense-cards {
@@ -252,6 +253,7 @@ input {
   box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
+  transition: all 1s ease-out;
 }
 
 .main {
@@ -337,9 +339,9 @@ p {
 }
 
 .right {
-  background-color: rgb(179, 189, 245);
+  background-color: rgb(128, 180, 248);
   justify-content: center;
-  flex-basis: 30%;
+  flex-basis: 25%;
   padding-top: 0;
 }
 .right label {
@@ -440,7 +442,7 @@ p {
 }
 
 .green {
-  background: rgb(185, 255, 217);
+  background: rgb(106, 250, 195);
 }
 .green .meh,
 .green .sad {

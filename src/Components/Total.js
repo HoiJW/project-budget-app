@@ -5,7 +5,7 @@ function Total( {sums, max} ){
     const [bgc, setBgc] = useState("total green")
     useEffect(() => {
         if (sums > max){setBgc("total red")}
-        else if(sums <= max*0.4){setBgc("total green")}
+        else if(sums <= max*0.5){setBgc("total green")}
         else if(sums <= max*0.75){setBgc("total yellow")}
     },[sums,max])
     return(
