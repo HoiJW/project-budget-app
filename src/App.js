@@ -89,8 +89,9 @@ function App() {
       const newState = [];
       for (let key in data) {
         newState.push(
-          {key:key, amount: parseInt(data[key]['userInput']),
-          title:data[key]['title']
+          { keys:key, 
+            amount: parseInt(data[key]['userInput']),
+            title:data[key]['title'],
           // 1. make an object {}
           // 2. build a property called "key" that has a value of the object's key
           // 3. build a property called "name" that has a value of the key's value
@@ -122,7 +123,7 @@ function App() {
       //   );
         
       // }
-      
+      console.log(newState);
       setExpenes(newState);
       // setBudget(newBudget);
       setTotal(newTotal);
