@@ -120,7 +120,7 @@ function App() {
       }
       
       setExpenes(newState);
-      setBudget(newBudget);
+      // setBudget(newBudget);
       setTotal(newTotal);
     });
     
