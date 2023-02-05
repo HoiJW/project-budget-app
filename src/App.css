@@ -243,7 +243,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 1% auto;
-  width: 50%;
+  width: 75%;
   transition: 1s;
 }
 
@@ -259,6 +259,26 @@ footer {
   -webkit-box-shadow: 6px 10px 5px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 10px 5px -2px rgba(0, 0, 0, 0.75);
   transition: all 1s ease-out;
+}
+
+.gold {
+  background-color: #ffd726;
+}
+
+.raddish {
+  background-color: #fa8d6b;
+}
+
+.purple {
+  background-color: rgb(150, 138, 253);
+}
+
+.mint {
+  background-color: rgb(128, 241, 245);
+}
+
+.orange {
+  background-color: rgb(245, 202, 123);
 }
 
 .main {
@@ -280,7 +300,6 @@ footer {
 .adding-section {
   display: flex;
   width: 90%;
-  margin: 0 auto;
   flex-wrap: wrap;
 }
 
@@ -289,7 +308,7 @@ form {
   padding: 1%;
   display: flex;
   justify-content: flex-end;
-  background: rgb(252, 233, 148);
+  background: rgb(252, 148, 168);
   border: 2px solid rgb(0, 0, 0);
   border-radius: 15px;
   box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
@@ -347,18 +366,22 @@ p {
   background-color: rgb(128, 180, 248);
   justify-content: center;
   flex-basis: 25%;
-  padding-top: 0;
+  padding: 0;
 }
 .right label {
   font-size: 1.8rem;
   color: rgb(252, 53, 47);
   font-weight: 600;
+  margin-right: 2%;
+  margin-top: 2%;
 }
 .right input {
   padding-left: 10px;
   width: 20%;
   font-size: 1.6rem;
   font-weight: 700;
+  margin-bottom: 30px;
+  padding-top: 6%;
 }
 
 .left {
@@ -369,6 +392,19 @@ p {
 @media (max-width: 1200px) {
   .contents {
     width: 75%;
+  }
+  .adding-section {
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .right {
+    flex-basis: 31%;
+  }
+  .right input {
+    padding: 0;
+  }
+  .right input {
+    padding: 2%;
   }
 }
 @media (max-width: 750px) {

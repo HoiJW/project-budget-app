@@ -19,7 +19,7 @@ function App() {
   
   const[title, setTitle] = useState('');
   
-  const[userBudget, setUserBudget] = useState('2000');
+  const[userBudget, setUserBudget] = useState('2500');
   //set up numbers only rescurtion and not insync with val for expense
   const [v, setV] = useState(0);
   

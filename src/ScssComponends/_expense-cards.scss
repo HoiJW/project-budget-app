@@ -116,18 +116,22 @@ p{
     background-color: rgb(128, 180, 248) ;
     justify-content: center;
     flex-basis: 25%;
-    padding-top: 0;
+    padding: 0;
     label{
         font-size: 1.8rem;
         color: rgb(252, 53, 47);
         font-weight: 600;
         margin-right: 2%;
+        margin-top: 2%;
     }
     input{
+        
         padding-left: 10px;
         width: 20%;
         font-size: 1.6rem;
         font-weight: 700;
+        margin-bottom: 30px;
+        padding-top: 6%;
     }
 }
 .left{
@@ -149,6 +153,9 @@ p{
         flex-basis: 31%;
         input{
             padding: 0;
+        }
+        input{
+            padding: 2%;
         }
     }
   }
