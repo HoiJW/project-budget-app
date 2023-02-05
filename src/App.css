@@ -242,7 +242,7 @@ input {
 }
 
 .expense-cards {
-  margin-top: 15px;
+  margin: 15px auto;
   border: 3px solid black;
   width: auto;
   border-radius: 10px;
