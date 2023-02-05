@@ -8,8 +8,8 @@ function App() {
   //create expense state that will store our expenses info
   const [expense, setExpenes] = useState([]);
   //create buget state to hold our budget info
-  const[budget, setBudget] = useState(0);
-  // get useEffect fucntion to run side effects on component mounts
+  // const[budget, setBudget] = useState(0);
+  // // get useEffect fucntion to run side effects on component mounts
   
   // create a statful value thats bound to input
   const[userInput, setUserInput] = useState('');
@@ -51,17 +51,17 @@ function App() {
     setUserInput('');
   }
 
-  const handleSubmitBudget = (event) => {
-    //get the info from userinput STATE
-    event.preventDefault();
-    console.log(userBudget);
-    //send it off to firebase using push function
-    const database = getDatabase(firebase);
-    const dbRef = ref(database);
-    const budget = {userBudget:userBudget};
-    push(dbRef, budget);
-    setUserBudget('');
-  }
+  // const handleSubmitBudget = (event) => {
+  //   //get the info from userinput STATE
+  //   event.preventDefault();
+  //   console.log(userBudget);
+  //   //send it off to firebase using push function
+  //   const database = getDatabase(firebase);
+  //   const dbRef = ref(database);
+  //   const budget = {userBudget:userBudget};
+  //   push(dbRef, budget);
+  //   setUserBudget('');
+  // }
   
   
   const handleRemove = (expenseId) => {
