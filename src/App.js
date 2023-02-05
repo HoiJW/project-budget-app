@@ -136,12 +136,9 @@ function App() {
   //need to make each expense into own div and can be remove "onClick"✔️
   //need add title into expense✔️
   
-  //need add budget that reflect in Total amount ?
-  //expense cant be added if larger than Total
-
-  //make a variable "sum" to sum up the current expenses
-
-  // scretch goal , adding progress bar to Total div
+  //need add budget that reflect in Total amount ?✔️
+  
+  // scretch goal , adding Color reflect the amounts / Total div
   // const [bgc, setBgc] = useState("total green")
   // useEffect(() => {
 
