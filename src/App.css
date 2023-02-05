@@ -461,7 +461,7 @@ button {
   white-space: nowrap;
   transition: 0.2s;
 }
-button:hover {
+button:hover, button:focus {
   box-shadow: rgba(3, 3, 3, 0.3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }/*# sourceMappingURL=App.css.map */

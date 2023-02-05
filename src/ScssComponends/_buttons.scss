@@ -23,7 +23,8 @@ button{
     vertical-align: middle;
     white-space: nowrap;
     transition: 0.2s;
-    &:hover{
+    &:hover,
+    &:focus{
         box-shadow: rgba(3, 3, 3, 0.3) 2px 8px 8px -5px;
         transform: translate3d(0, 2px, 0);
       
