@@ -102,7 +102,7 @@ p{
     padding-top: 0;
     label{
         font-size: 1.8rem;
-        color: rgb(255, 65, 59);
+        color: rgb(252, 53, 47);
         font-weight: 600;
     }
     input{
@@ -169,5 +169,11 @@ p{
             margin: 5% auto;
             width: 95%;
         }
+    }
+  }
+
+  @media (max-width: 440px) {
+    .expense-cards{
+        margin: 1% auto;
     }
   }

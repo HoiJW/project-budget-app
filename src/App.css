@@ -346,7 +346,7 @@ p {
 }
 .right label {
   font-size: 1.8rem;
-  color: rgb(255, 65, 59);
+  color: rgb(252, 53, 47);
   font-weight: 600;
 }
 .right input {
@@ -411,6 +411,11 @@ p {
     width: 95%;
   }
 }
+@media (max-width: 440px) {
+  .expense-cards {
+    margin: 1% auto;
+  }
+}
 .progress-bar {
   border: 1px solid black;
   height: 20px;
@@ -437,8 +442,32 @@ p {
 .total p {
   text-decoration: none;
 }
+.total p,
+.total h3,
+.total .max {
+  transition: 1s;
+}
 .total .max {
   font-size: 2rem;
+}
+.total h3 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8156862745);
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 .green {
@@ -448,6 +477,9 @@ p {
 .green .sad {
   display: none;
 }
+.green .max {
+  color: rgb(255, 255, 255);
+}
 
 .yellow {
   background: rgb(241, 225, 129);
@@ -455,6 +487,13 @@ p {
 .yellow .smile,
 .yellow .sad {
   display: none;
+}
+.yellow p {
+  font-size: 2.5rem;
+}
+.yellow .max {
+  color: rgb(252, 53, 47);
+  text-decoration: underline;
 }
 
 .red {
@@ -464,10 +503,30 @@ p {
 .red .smile {
   display: none;
 }
+.red .max {
+  color: rgb(240, 240, 240);
+  font-size: 2.5rem;
+}
+.red h3 {
+  color: rgb(255, 0, 0);
+  font-size: 3.5rem;
+}
+.red p {
+  font-size: 3rem;
+}
 
 @media (max-width: 550px) {
   .total {
     width: 70%;
+  }
+  h3 {
+    width: 100%;
+  }
+  .green h3,
+.yellow h3,
+.red h3 {
+    font-size: 2rem;
+    padding: 10px 0;
   }
 }
 button {

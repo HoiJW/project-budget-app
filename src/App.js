@@ -19,7 +19,7 @@ function App() {
   
   const[title, setTitle] = useState('');
   
-  const[userBudget, setUserBudget] = useState('');
+  const[userBudget, setUserBudget] = useState('1000');
   //set up numbers only rescurtion and not insync with val for expense
   const [v, setV] = useState(0);
   
@@ -89,7 +89,7 @@ function App() {
       const newState = [];
       for (let key in data) {
         newState.push(
-          { keys:key, 
+          { key:key, 
             amount: parseInt(data[key]['userInput']),
             title:data[key]['title'],
           // 1. make an object {}
@@ -123,7 +123,6 @@ function App() {
       //   );
         
       // }
-      console.log(newState);
       setExpenes(newState);
       // setBudget(newBudget);
       setTotal(newTotal);
@@ -169,7 +168,7 @@ function App() {
         <button onClick={handleSubmit}>Add Expense</button>
       </form>
       
-      <form className='right' action="submit">
+      <form className='right' >
         <label htmlFor="newBudget">Your Budget:</label>
         <input onChange={handleBudget} 
         type="text" 
