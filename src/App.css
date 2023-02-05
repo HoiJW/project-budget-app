@@ -233,6 +233,11 @@ input {
   font-family: "Shadows Into Light", cursive;
 }
 
+footer {
+  text-decoration: none;
+  font-size: 18px;
+}
+
 .contents {
   display: flex;
   flex-wrap: wrap;

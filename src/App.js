@@ -200,7 +200,7 @@ function App() {
       </div>
 
       <Total sums={total} max={userBudget}/>
-      <footer><p>built by @Hoi W 2023</p></footer>
+      <footer><p>built by Hoi W @2023</p></footer>
       {/* <div className='budget-cards'>
             <div className="titles">
                 <h2>{name}</h2>
