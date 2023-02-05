@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 1% auto;
-    width: 50%;
+    width: 75%;
     transition: 1s;
 }
 
@@ -20,6 +20,22 @@
 -moz-box-shadow: 6px 10px 5px -2px rgba(0,0,0,0.75);
     transition: all 1s ease-out;
 }
+.gold{
+    background-color: #ffd726;
+}
+.raddish{
+    background-color: #fa8d6b;
+}
+.purple{
+    background-color: rgb(150, 138, 253);
+}
+.mint{
+    background-color: rgb(128, 241, 245);
+}
+.orange{
+    background-color: rgb(245, 202, 123);
+}
+
 .main{
     display: flex;
     flex-direction: column;
@@ -38,15 +54,16 @@
 .adding-section{
     display: flex;
     width: 90%;
-    margin: 0 auto;
     flex-wrap: wrap;
+    
+    
 }
 form{
     margin: 1%;
     padding: 1%;
     display: flex;
     justify-content: flex-end;
-    background: rgb(252, 233, 148);
+    background: rgb(252, 148, 168);;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 15px;
     box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
@@ -104,6 +121,7 @@ p{
         font-size: 1.8rem;
         color: rgb(252, 53, 47);
         font-weight: 600;
+        margin-right: 2%;
     }
     input{
         padding-left: 10px;
@@ -121,6 +139,17 @@ p{
   @media (max-width: 1200px) {
     .contents{
         width: 75%;
+        
+    }
+    .adding-section{
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .right{
+        flex-basis: 31%;
+        input{
+            padding: 0;
+        }
     }
   }
 

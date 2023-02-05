@@ -142,7 +142,22 @@ function App() {
   //make a variable "sum" to sum up the current expenses
 
   // scretch goal , adding progress bar to Total div
-  
+  // const [bgc, setBgc] = useState("total green")
+  // useEffect(() => {
+
+
+  const color = amount => {
+    console.log(amount);
+    if (amount >= 600){return("expense-cards gold")}
+  else if(amount >= 450){return("expense-cards raddish")}
+  else if(amount >= 200){return("expense-cards purple")}
+  else if(amount >= 100){return("expense-cards mint")}
+  else if(amount >= 50){return("expense-cards orange")}
+  else if(amount >= 0){return("expense-cards")}
+
+}
+    
+
   return(
     <div className="main">
       <h1>My Budgets</h1>
@@ -184,9 +199,11 @@ function App() {
       
       <div className='contents'>
           {expense.map ( (expense) => {
+            const bgName = color(expense.amount)
               return (
-                <div className='expense-cards'>
-                <div key={expense.key}>
+                <div className={bgName}
+                key={expense.key}>
+                <div >
                   <h2>{expense.title}</h2>
                   <p>${expense.amount}</p>
                   <button onClick={() => {if (window.confirm('Are you sure you wish to delete this item?'))handleRemove(expense.key)}}>
@@ -201,26 +218,9 @@ function App() {
 
       <Total sums={total} max={userBudget}/>
       <footer><p>built by Hoi W @2023</p></footer>
-      {/* <div className='budget-cards'>
-            <div className="titles">
-                <h2>{name}</h2>
-                <h3>${amount} / <span className="max">${max}</span> </h3>
-            </div>
-            
-            <div className="progress-bar">
-            </div>
-        </div> */}
+      
     </div>
-    // <div>
-    //   <h1>My Budgets</h1>
-    //   <button>Add Budget</button>
-    //   <button>Add Expense</button>
-      
-    //   <BudgetCards name="Entertainment" amount={150} max={1000}/>
-      
-    //   <Total sums={150} max={1000}/>
-
-    // </div>
+    
   )
 }
 
