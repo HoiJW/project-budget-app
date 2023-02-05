@@ -14,7 +14,7 @@ function App() {
   // create a statful value thats bound to input
   const[userInput, setUserInput] = useState('');
   //set up numbers only rescurtion 
-  const [val, setVal] = useState(0);
+  
   
   const[title, setTitle] = useState('');
   
@@ -27,16 +27,15 @@ function App() {
   //add event listener that fires everytune there is a change in our input
 
   const handleInput = (event) => {
-    setUserInput(event.target.value);
-    setVal((v) => (event.target.validity.valid ? event.target.value :v))
+    setUserInput(event.target.validity.valid ? event.target.value :v);
+    setV('')
   }
   const handleTitle =(event) => {
     setTitle(event.target.value);
   }
 
   const handleBudget = (event) => {
-    setUserBudget(event.target.value);
-    setV((v) => (event.target.validity.valid ? event.target.value :v))
+    setUserBudget(event.target.validity.valid ? event.target.value :v);
   }
   
 
@@ -49,6 +48,7 @@ function App() {
     const expense = {userInput:userInput, title:title};
     push(dbRef, expense);
     setUserInput('');
+    setTitle('');
   }
 
   // const handleSubmitBudget = (event) => {
@@ -153,7 +153,7 @@ function App() {
         placeholder="$100"
         id="newExpense"
         pattern='[0-9]*' 
-        value={(userInput, val)}
+        value={(userInput)}
         
         />
         
@@ -174,7 +174,7 @@ function App() {
         id="newBudget"
         placeholder="$1000" 
         pattern='[0-9]*' 
-        value={(userBudget,v)}
+        value={(userBudget)}
         />
         
         {/* <button onClick={handleSubmitBudget}>Add Budget</button> */}
