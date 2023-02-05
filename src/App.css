@@ -388,19 +388,25 @@ p {
   h1 {
     font-size: 3.5rem;
   }
-  .left {
+  .left,
+.right {
     flex-direction: column;
     flex-basis: 60%;
   }
-  .left label {
+  .left label,
+.right label {
     padding: 0;
   }
-  .left input {
+  .left input,
+.right input {
     margin: 0 auto;
     text-align: center;
+    padding: 0;
+    width: 65%;
   }
   form button {
     margin: 5% auto;
+    width: 95%;
   }
 }
 .progress-bar {
@@ -431,6 +437,11 @@ p {
   font-size: 2rem;
 }
 
+@media (max-width: 550px) {
+  .total {
+    width: 70%;
+  }
+}
 button {
   -webkit-appearance: button;
      -moz-appearance: button;

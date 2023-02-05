@@ -14,3 +14,9 @@ transition: 1s;
         font-size: 2rem;
     }
 }
+
+@media (max-width: 550px) {
+    .total{
+        width: 70%;
+    }
+  }

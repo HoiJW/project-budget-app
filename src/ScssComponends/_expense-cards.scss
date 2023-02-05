@@ -149,7 +149,8 @@ p{
     h1{
         font-size: 3.5rem;
     }
-    .left{
+    .left,
+    .right{
         flex-direction: column;
         flex-basis: 60%;
         label{
@@ -158,11 +159,14 @@ p{
         input{
             margin: 0 auto;
             text-align: center;
+            padding: 0;
+            width: 65%;
         }
     }
     form{
         button{
-            margin: 5% auto
+            margin: 5% auto;
+            width: 95%;
         }
     }
   }
