@@ -429,12 +429,38 @@ p {
   box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
-  background: rgb(185, 255, 217);
   font-size: 2rem;
   transition: 1s;
 }
+.total p {
+  text-decoration: none;
+}
 .total .max {
   font-size: 2rem;
+}
+
+.green {
+  background: rgb(185, 255, 217);
+}
+.green .meh,
+.green .sad {
+  display: none;
+}
+
+.yellow {
+  background: rgb(241, 225, 129);
+}
+.yellow .smile,
+.yellow .sad {
+  display: none;
+}
+
+.red {
+  background: rgb(233, 103, 103);
+}
+.red .meh,
+.red .smile {
+  display: none;
 }
 
 @media (max-width: 550px) {
