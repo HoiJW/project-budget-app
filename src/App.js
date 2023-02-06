@@ -19,7 +19,7 @@ function App() {
   
   const[title, setTitle] = useState('');
   
-  const[userBudget, setUserBudget] = useState('2500');
+  const[userBudget, setUserBudget] = useState('2000');
   //set up numbers only rescurtion and not insync with val for expense
   const [v, setV] = useState(0);
   
@@ -44,7 +44,7 @@ function App() {
     //get the info from userinput STATE
     event.preventDefault();
     if (userInput === "") {
-      alert("you've submited an empty amount");
+      alert("you've submited an unclear item ");
     }
     //send it off to firebase using push function
     const database = getDatabase(firebase);
