@@ -145,11 +145,12 @@ function App() {
 
   const color = amount => {
     console.log(amount);
-    if (amount >= 600){return("expense-cards gold")}
+    if (amount >= 1000){return("expense-cards big-red")}
+  else if(amount >= 600){return("expense-cards gold")}
   else if(amount >= 450){return("expense-cards raddish")}
   else if(amount >= 200){return("expense-cards purple")}
   else if(amount >= 100){return("expense-cards mint")}
-  else if(amount >= 50){return("expense-cards orange")}
+  else if(amount >= 50){return("expense-cards grey")}
   else if(amount >= 0){return("expense-cards")}
 
 }

@@ -14,7 +14,7 @@ function Total( {sums, max} ){
            <div className="titles">
                 <h2>Total Expenses</h2>
                 <p className="smile">😊 yay~!</p>
-                <p className="meh">🤨 hmmmm~?</p>
+                <p className="meh">🤨 hmm~Already?</p>
                 <p className="sad">😥 OH NO!</p>
 
                 <h3>${sums} / <span className="max">${max}</span></h3>
