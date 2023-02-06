@@ -18,7 +18,14 @@
     box-shadow: 6px 10px 5px -2px rgba(0,0,0,0.75);
 -webkit-box-shadow: 6px 10px 5px -2px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 10px 5px -2px rgba(0,0,0,0.75);
-    transition: all 1s ease-out;
+    transition: all 0.3s ease-out;
+    &:hover,
+    &:focus{
+        box-shadow: rgba(3, 3, 3, 0.3) 2px 8px 8px -5px;
+        transform: translate3d(1.1%);
+        scale: 1.01;
+      
+    }
 }
 .big-red{
     background-color: rgba(237, 54, 54, 0.980);
