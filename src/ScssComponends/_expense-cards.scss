@@ -21,22 +21,22 @@
     transition: all 1s ease-out;
 }
 .big-red{
-    background-color: rgb(237 54 54);
+    background-color: rgba(237, 54, 54, 0.980);
 }
 .gold{
-    background-color: #ffd726;
+    background-color: #ffd726fb;
 }
 .raddish{
-    background-color: #ed893b;
+    background-color: #ed883bfa;
 }
 .purple{
-    background-color: rgb(150, 138, 253);
+    background-color: rgb(150, 138, 253,0.980);
 }
 .mint{
-    background-color: rgb(120, 231, 217);
+    background-color: rgb(99, 196, 252,0.980);
 }
 .grey{
-    background-color: rgb(173, 171, 167);
+    background-color: rgb(173, 171, 167,0.980);
 }
 
 .main{
@@ -66,7 +66,7 @@ form{
     padding: 1%;
     display: flex;
     justify-content: flex-end;
-    background: rgb(252, 148, 168);;
+    background: rgb(252, 148, 168,0.980);;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 15px;
     box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
@@ -97,7 +97,7 @@ input{
 }
 h1{
     font-size: 5rem;
-    background-color: rgba(255, 255, 255, 0.959);
+    background-color: rgba(255, 255, 255, 0.980);
     width: 500px;
     margin: 2% auto;
     border: 2px solid rgb(0, 0, 0);
@@ -116,7 +116,7 @@ p{
     text-decoration: underline;
 }
 .right{
-    background-color: rgb(128, 180, 248) ;
+    background-color: rgb(128, 180, 248,0.980) ;
     justify-content: center;
     flex-basis: 25%;
     padding: 0;

@@ -43,7 +43,7 @@
     
 }
 .green{
-    background: rgb(106, 250, 195);
+    background: rgba(106, 250, 195, 0.980);
     .meh,
     .sad{
         display: none;
@@ -53,7 +53,7 @@
     }
 }
 .yellow{
-    background: rgb(241, 225, 129);
+    background: rgba(255, 207, 17, 0.980);
     .smile,
     .sad{
         display: none;
@@ -62,13 +62,13 @@
         font-size: 2.2rem;
     }
     .max{
-        color: rgb(252, 53, 47);
+        color: rgba(252, 54, 47, 0.959);
         text-decoration: underline;
     }
 
 }
 .red{
-    background: rgb(233, 103, 103);
+    background: rgba(233, 103, 103, 0.986);
     .meh,
     .smile{
         display: none;

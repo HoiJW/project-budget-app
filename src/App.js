@@ -158,7 +158,7 @@ function App() {
 
   return(
     <div className="main">
-      <h1>My Budgets</h1>
+      <h1>My Budget</h1>
       <div className='adding-section'>
       <form className='left' action="submit">
         <label htmlFor="newExpense">Amount:</label>
