@@ -110,7 +110,6 @@ function App() {
       let newTotal = 0;
       newState.forEach((object) => {
         newTotal = newTotal + object['amount']
-        // console.log(newTotal);
       })
 
       // const newBudget = [];
@@ -139,12 +138,11 @@ function App() {
   //need add budget that reflect in Total amount ?✔️
   
   // scretch goal , adding Color reflect the amounts / Total div
-  // const [bgc, setBgc] = useState("total green")
-  // useEffect(() => {
+  
 
 
   const color = amount => {
-    console.log(amount);
+    // console.log(amount);
     if (amount >= 1000){return("expense-cards big-red")}
   else if(amount >= 600){return("expense-cards gold")}
   else if(amount >= 450){return("expense-cards raddish")}
