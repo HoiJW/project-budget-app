@@ -107,6 +107,10 @@ function App() {
 }
   return(
     <div className="main">
+      <motion.div 
+      initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1}}>
       <h1>My Budget</h1>
       <div className='adding-section'>
         <form className='left' action="submit">
@@ -138,6 +142,9 @@ function App() {
           />
         </form>
       </div>
+      </motion.div>
+      
+      
       {/* div return when data pushed to cloud */}
       <div className='contents'>
           {expense.map ( (expense) => {

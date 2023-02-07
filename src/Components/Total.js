@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 function Total( {sums, max} ){
     const [bgc, setBgc] = useState("total green")
     useEffect(() => {
@@ -7,7 +8,11 @@ function Total( {sums, max} ){
         else if(sums <= max*0.75){setBgc("total yellow")}
     },[sums,max])
     return(
-        <div className={bgc}>
+        <motion.div 
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5}}
+        className={bgc}>
            <div className="titles">
                 <h2>Total Expenses</h2>
                 <p className="smile">😊 yay~!</p>
@@ -15,7 +20,7 @@ function Total( {sums, max} ){
                 <p className="sad">😥 OH NO!</p>
                 <h3>${sums} / <span className="max">${max}</span></h3>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
