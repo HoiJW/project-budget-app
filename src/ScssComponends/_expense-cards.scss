@@ -9,7 +9,7 @@
 
 .expense-cards{
     margin: 15px auto;
-    border: 3px solid black;
+    border: 4px solid rgba(83, 83, 83, 0.842);
     width: auto;
     border-radius: 10px;
     padding: 10px;
@@ -23,7 +23,7 @@
     &:focus{
         box-shadow: rgba(3, 3, 3, 0.3) 2px 8px 8px -5px;
         transform: translate3d(1.1%);
-        scale: 1.01;
+        scale: 1.03;
       
     }
 }
@@ -37,10 +37,10 @@
     background-color: #ed883bfa;
 }
 .purple{
-    background-color: rgb(150, 138, 253,0.980);
+    background-color: rgba(135, 111, 219, 0.98);
 }
 .mint{
-    background-color: rgb(99, 196, 252,0.980);
+    background-color: rgba(14, 149, 149, 0.98);
 }
 .grey{
     background-color: rgb(173, 171, 167,0.980);
@@ -74,7 +74,7 @@ form{
     display: flex;
     justify-content: flex-end;
     background: rgb(252, 148, 168,0.980);;
-    border: 2px solid rgb(0, 0, 0);
+    border: 3px solid rgba(63, 63, 63, 0.925);
     border-radius: 15px;
     box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 5px -10px rgba(0,0,0,0.75);

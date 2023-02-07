@@ -249,7 +249,7 @@ footer {
 
 .expense-cards {
   margin: 15px auto;
-  border: 3px solid black;
+  border: 4px solid rgba(83, 83, 83, 0.842);
   width: auto;
   border-radius: 10px;
   padding: 10px;
@@ -263,7 +263,7 @@ footer {
 .expense-cards:hover, .expense-cards:focus {
   box-shadow: rgba(3, 3, 3, 0.3) 2px 8px 8px -5px;
   transform: translate3d(1.1%);
-  scale: 1.01;
+  scale: 1.03;
 }
 
 .big-red {
@@ -279,11 +279,11 @@ footer {
 }
 
 .purple {
-  background-color: rgba(150, 138, 253, 0.98);
+  background-color: rgba(135, 111, 219, 0.98);
 }
 
 .mint {
-  background-color: rgba(99, 196, 252, 0.98);
+  background-color: rgba(14, 149, 149, 0.98);
 }
 
 .grey {
@@ -318,7 +318,7 @@ form {
   display: flex;
   justify-content: flex-end;
   background: rgba(252, 148, 168, 0.98);
-  border: 2px solid rgb(0, 0, 0);
+  border: 3px solid rgba(63, 63, 63, 0.925);
   border-radius: 15px;
   box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px -10px rgba(0, 0, 0, 0.75);
@@ -441,16 +441,16 @@ p {
     font-size: 3.5rem;
   }
   .left,
-.right {
+  .right {
     flex-direction: column;
     flex-basis: 60%;
   }
   .left label,
-.right label {
+  .right label {
     padding: 0;
   }
   .left input,
-.right input {
+  .right input {
     margin: 0 auto;
     text-align: center;
     padding: 0;
@@ -479,7 +479,7 @@ p {
 
 .total {
   margin: 2% auto;
-  border: 3px solid black;
+  border: 3px solid rgba(31, 31, 31, 0.938);
   width: 400px;
   border-radius: 10px;
   padding: 10px;
@@ -579,8 +579,8 @@ p {
     width: 100%;
   }
   .green h3,
-.yellow h3,
-.red h3 {
+  .yellow h3,
+  .red h3 {
     font-size: 2rem;
     padding: 10px 0;
   }
@@ -608,7 +608,6 @@ button {
   text-transform: none;
   touch-action: manipulation;
   -moz-user-select: none;
-   -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
