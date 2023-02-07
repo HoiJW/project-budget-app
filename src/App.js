@@ -27,7 +27,7 @@ function App() {
   const handleSubmit = (event) => {
     //get the info from userinput STATE
     event.preventDefault();
-    if (userInput === "") {
+    if (title === "") {
       alert("you've submited an unclear item ");
     }
     //send it off to firebase using push function
@@ -102,7 +102,7 @@ function App() {
           id="newTitle"
           value={(title)}
           />
-          <button onClick={handleSubmit}>Add Expense</button>
+          <button onClick={handleSubmit} disabled={!userInput}>Add Expense</button>
         </form>
         <form className='right' >
           <label htmlFor="newBudget">Your Budget:</label>
