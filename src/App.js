@@ -106,7 +106,11 @@ function App() {
     //color css for different amount with dynamic changes
 }
   return(
-    <div className="main">
+    <motion.div 
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1.1}}
+    className="main">
       <motion.div 
       initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
@@ -171,7 +175,7 @@ function App() {
       </div>
       <Total sums={total} max={userBudget}/>
       <footer><p>built by Hoi W @2023</p></footer>
-    </div>
+    </motion.div>
   )
 }
 
