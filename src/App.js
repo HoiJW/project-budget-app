@@ -135,7 +135,7 @@ function App() {
           />
           <button onClick={handleSubmit} disabled={!userInput}>Add Expense</button>
         </form>
-        <form className='right' >
+        <form className='right' action="" >
           <label htmlFor="newBudget">Your Budget:</label>
           <input onChange={handleBudget} 
           type="text" 
@@ -144,6 +144,7 @@ function App() {
           pattern='[0-9]*' 
           value={(userBudget)}
           />
+          <button className='sr-only' disabled={userBudget}>prevent your budget refresh</button>
         </form>
       </div>
       </motion.div>
