@@ -4,6 +4,7 @@ import firebase from './firebase';
 // to get the database working must import firebase modules
 import { getDatabase, onValue, push, remove, ref} from 'firebase/database';
 import Total from './Components/Total';
+import Swal from 'sweetalert2';
 
 function App() {
   //stating all the items to use for the app
@@ -28,8 +29,19 @@ function App() {
     //get the info from userinput STATE
     event.preventDefault();
     if (title === "") {
-      alert("you've submited an unclear item ");
-    }
+      Swal.fire(
+        'Nameless item?',
+        'an empty item is been submitted',
+        'question'
+      )
+    }else (
+      Swal.fire({
+        icon: 'success',
+        title: 'Your work has been submitted',
+        showConfirmButton: false,
+        timer: 800
+      })
+    )
     //send it off to firebase using push function
     const database = getDatabase(firebase);
     const dbRef = ref(database);
@@ -42,7 +54,24 @@ function App() {
   const handleRemove = (expenseId) => {
     const database = getDatabase(firebase);
     const dbRef = ref(database, `${expenseId}`);
-    remove(dbRef);
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "the item will deleted permanently",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        ).then(remove(dbRef))
+      }
+    })
+    
   }
   //fair base linking set up
   useEffect( () => {
@@ -126,7 +155,7 @@ function App() {
                 <div >
                   <h2>{title}</h2>
                   <p>${amount}</p>
-                  <button onClick={() => {if (window.confirm('Are you sure you wish to delete this item?'))handleRemove(key)}}>
+                  <button onClick={() => {handleRemove(key)}}>
                   remove
                   </button>
                 </div>
