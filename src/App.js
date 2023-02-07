@@ -12,7 +12,7 @@ function App() {
   const [expense, setExpenes] = useState([]);
   const[userInput, setUserInput] = useState('');
   const[title, setTitle] = useState(''); 
-  const[userBudget, setUserBudget] = useState('2500');
+  const[userBudget, setUserBudget] = useState('');
   const [v, setV] = useState(0);
   const[total, setTotal] = useState(0);
   //event listener upon form submition
@@ -121,7 +121,7 @@ function App() {
           <label htmlFor="newExpense">Amount:</label>
           <input onChange={handleInput} 
           type="text"
-          placeholder="$100"
+          placeholder="e.g $100"
           id="newExpense"
           pattern='[0-9]*' 
           value={(userInput)}
