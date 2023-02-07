@@ -10,7 +10,7 @@ function App() {
   const [expense, setExpenes] = useState([]);
   const[userInput, setUserInput] = useState('');
   const[title, setTitle] = useState(''); 
-  const[userBudget, setUserBudget] = useState('');
+  const[userBudget, setUserBudget] = useState('1000');
   const [v, setV] = useState(0);
   const[total, setTotal] = useState(0);
   //event listener upon form submition
