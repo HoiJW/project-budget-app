@@ -30,9 +30,9 @@ function App() {
     event.preventDefault();
     if (title === "") {
       Swal.fire(
-        'Nameless item?',
-        'an empty item is been submitted',
-        'question'
+        'No name item',
+        'An empty item has been submitted',
+        'info'
       )
     }else (
       Swal.fire({
