@@ -5,6 +5,7 @@ import firebase from './firebase';
 import { getDatabase, onValue, push, remove, ref} from 'firebase/database';
 import Total from './Components/Total';
 import Swal from 'sweetalert2';
+import { motion } from "framer-motion";
 
 function App() {
   //stating all the items to use for the app
@@ -34,14 +35,7 @@ function App() {
         'An empty item has been submitted',
         'info'
       )
-    }else (
-      Swal.fire({
-        icon: 'success',
-        title: 'Your work has been submitted',
-        showConfirmButton: false,
-        timer: 800
-      })
-    )
+    }
     //send it off to firebase using push function
     const database = getDatabase(firebase);
     const dbRef = ref(database);
@@ -150,16 +144,21 @@ function App() {
             const bgName = color(expense.amount)
             const { key, title, amount} = expense
               return (
-                <div className={bgName}
-                key={key}>
-                <div >
-                  <h2>{title}</h2>
-                  <p>${amount}</p>
-                  <button onClick={() => {handleRemove(key)}}>
-                  remove
-                  </button>
-                </div>
-                </div>
+                <motion.div 
+                animate={{ scale: [0.7, 1.5, 1.3 ,1],
+                  rotate: [0, -30, 30, 0],
+                  borderRadius: ["20%", "20%", "50%", "50%", "15px"] }}
+                transition={{ duration: 0.4 }}
+                
+                className={bgName}key={key}>
+                  <div>
+                    <h2>{title}</h2>
+                    <p>${amount}</p>
+                    <button onClick={() => {handleRemove(key)}}>
+                    remove
+                    </button>
+                  </div>
+                </motion.div>
               )
           })}
       </div>
