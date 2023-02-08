@@ -115,7 +115,9 @@ function App() {
       initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 1}}>
-      <h1>My Budget</h1>
+      <motion.h1
+      whileTap={{rotate: [0, -30, 30, -30, 30, -30, 30, 0]}}
+      >My Budget</motion.h1>
       <div className='adding-section'>
         <form className='left' action="submit">
           <label htmlFor="newExpense">Amount:</label>

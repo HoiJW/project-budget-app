@@ -23,7 +23,7 @@ function Total( {sums, max} ){
             right: 30,
             bottom: 30,
             }}
-        whileHover={{ rotate: [0, -30, 30, 0] }}
+        whileHover={{ rotate: [0, -30, 30, 0],scale: 1.1 }}
         
         className={bgc}>
            <div className="titles">
