@@ -5,7 +5,7 @@ function Total( {sums, max} ){
     useEffect(() => {
         if (sums >= max){setBgc("total red")}
         else if(sums <= max*0.55){setBgc("total green")}
-        else if(sums <= max*0.75){setBgc("total yellow")}
+        else if(sums <= max*0.99){setBgc("total yellow")}
     },[sums,max])
     return(
         <motion.div 

@@ -99,6 +99,7 @@ input{
     margin-right: 1%;
     outline: none;
     font-size: 1.3rem;
+    font-weight: 800;
 }
 h1{
     font-size: 5rem;
@@ -121,25 +122,25 @@ p{
     text-decoration: underline;
 }
 .right{
-    background-color: rgb(128, 180, 248,0.980) ;
+    background-color: rgba(55, 142, 255, 0.98);
     justify-content: center;
     flex-basis: 25%;
     padding: 0;
     label{
-        font-size: 1.8rem;
-        color: rgb(252, 53, 47);
-        font-weight: 600;
+        font-size: 2rem;
+        color: rgb(255, 215, 41);
+        font-weight: 700;
         margin-right: 2%;
         margin-top: 2%;
     }
     input{
-        
         padding-left: 10px;
         width: 20%;
         font-size: 1.6rem;
         font-weight: 700;
         margin-bottom: 30px;
         padding-top: 6%;
+        color: white;
     }
 }
 .left{

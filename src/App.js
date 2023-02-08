@@ -97,7 +97,7 @@ function App() {
         </motion.div>
       <ExpenseCards expenseData={expense} handleRemove={handleRemove} />  
       <Total sums={total} max={userBudget}/>
-      <footer><p>built by Hoi W @2023</p></footer>
+      <footer><div className='footer'><p>built by Hoi W @2023</p></div></footer>
     </motion.div>
   )
 }
