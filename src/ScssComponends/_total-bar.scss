@@ -46,8 +46,7 @@
         text-transform: none;
         vertical-align: middle;
         white-space: nowrap;
-    }
-    
+    }   
 }
 .green{
     background: rgba(106, 250, 195, 0.980);
@@ -72,7 +71,6 @@
         color: rgba(252, 54, 47, 0.959);
         text-decoration: underline;
     }
-
 }
 .red{
     background: rgba(233, 103, 103, 0.986);
@@ -91,10 +89,8 @@
     }
     p{
         font-size: 3rem;
-    }
-    
+    }  
 }
-
 @media (max-width: 550px) {
     .total{
         width: 70%;
@@ -106,13 +102,14 @@
     .yellow,
     .red{
         h3{
-            font-size: 2rem;
+            font-size: 2.5rem;
             padding: 10px 0;
             margin: 0;
         }
-        p{
+        p,
+        .max{
             font-size: 2rem;
         }
+        
     }
-
   }
