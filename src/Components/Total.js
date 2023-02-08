@@ -23,7 +23,8 @@ function Total( {sums, max} ){
             right: 30,
             bottom: 30,
             }}
-        whileHover={{ rotate: [90,-45,40,0] ,}}
+        whileHover={{ rotate: [0, -30, 30, 0] }}
+        
         className={bgc}>
            <div className="titles">
                 <h2>Total Expenses</h2>
