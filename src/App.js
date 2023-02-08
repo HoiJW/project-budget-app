@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react';
 import firebase from './firebase';
 // to get the database working must import firebase modules
 import { getDatabase, onValue, push, remove, ref} from 'firebase/database';
-import Total from './Components/Total';
 import Swal from 'sweetalert2';
 import { motion } from "framer-motion";
+import Total from './Components/Total';
+import ExpenseCards from './Components/ExpenseCard';
 
 function App() {
   //stating all the items to use for the app
@@ -95,65 +96,47 @@ function App() {
   //need add title into expense✔️
   //need add budget that reflect in Total amount ?✔️
   // scretch goal , adding Color reflect the amounts / Total div✔️
-  const color = amount => {
-    if (amount >= 1000){return("expense-cards big-red")}
-  else if(amount >= 600){return("expense-cards gold")}
-  else if(amount >= 450){return("expense-cards raddish")}
-  else if(amount >= 200){return("expense-cards purple")}
-  else if(amount >= 100){return("expense-cards mint")}
-  else if(amount >= 50){return("expense-cards grey")}
-  else if(amount >= 0){return("expense-cards")}
-    //color css for different amount with dynamic changes
-}
+
   return(
-    <motion.div 
-    initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1.1}}
-    className="main">
-      <motion.div 
-      initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1}}>
-      <motion.h1
-      whileTap={{rotate: [0, -30, 30, -30, 30, -30, 30, 0]}}
-      >My Budget</motion.h1>
-      <div className='adding-section'>
-        <form className='left' action="submit">
-          <label htmlFor="newExpense">Amount:</label>
-          <input onChange={handleInput} 
-          type="text"
-          placeholder="e.g $100"
-          id="newExpense"
-          pattern='[0-9]*' 
-          value={(userInput)}
-          />
-          <label htmlFor="newTitle">Item:</label>
-          <input onChange={handleTitle} 
-          type="text"
-          placeholder="e.g Food" 
-          id="newTitle"
-          value={(title)}
-          />
-          <button onClick={handleSubmit} disabled={!userInput}>Add Expense</button>
-        </form>
-        <form className='right' action="" >
-          <label htmlFor="newBudget">Your Budget:</label>
-          <input onChange={handleBudget} 
-          type="text" 
-          id="newBudget"
-          placeholder="$1000" 
-          pattern='[0-9]*' 
-          value={(userBudget)}
-          />
-          <button className='sr-only' disabled={userBudget}>prevent your budget refresh</button>
-        </form>
-      </div>
-      </motion.div>
+    <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}transition={{ duration: 1.1}} className="main">
+      <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}transition={{ duration: 1}}>
+        <motion.h1 whileTap={{rotate: [0, -30, 30, -30, 30, -30, 30, 0]}}>My Budget</motion.h1>
+        <div className='adding-section'>
+          <form className='left' action="submit">
+            <label htmlFor="newExpense">Amount:</label>
+            <input onChange={handleInput} 
+            type="text"
+            placeholder="e.g $100"
+            id="newExpense"
+            pattern='[0-9]*' 
+            value={(userInput)}
+            />
+            <label htmlFor="newTitle">Item:</label>
+            <input onChange={handleTitle} 
+            type="text"
+            placeholder="e.g Food" 
+            id="newTitle"
+            value={(title)}
+            />
+            <button onClick={handleSubmit} disabled={!userInput}>Add Expense</button>
+          </form>
+          <form className='right' action="" >
+            <label htmlFor="newBudget">Your Budget:</label>
+            <input onChange={handleBudget} 
+            type="text" 
+            id="newBudget"
+            placeholder="$1000" 
+            pattern='[0-9]*' 
+            value={(userBudget)}
+            />
+            <button className='sr-only' disabled={userBudget}>prevent your budget refresh</button>
+          </form>
+        </div>
+        </motion.div>
       
       
       {/* div return when data pushed to cloud */}
-      <div className='contents'>
+      {/* <div className='contents'>
           {expense.map ( (expense) => {
             const bgName = color(expense.amount)
             const { key, title, amount} = expense
@@ -183,7 +166,7 @@ function App() {
                 </motion.div>
               )
           })}
-      </div>
+      </div> */}
       <Total sums={total} max={userBudget}/>
       <footer><p>built by Hoi W @2023</p></footer>
     </motion.div>
