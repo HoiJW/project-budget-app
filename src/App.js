@@ -46,7 +46,7 @@ function App() {
   const handleRemove = (expenseId) => {
     const database = getDatabase(firebase);
     const dbRef = ref(database, `${expenseId}`);
-    Swal.fire({title: 'Are you sure?',text: "the item will deleted permanently",icon: 'warning',showCancelButton: true,confirmButtonColor: '#3085d6',cancelButtonColor: '#d33',confirmButtonText: 'Yes, delete it!'
+    Swal.fire({title: 'Are you sure?',text: "This item will be deleted permanently.",icon: 'warning',showCancelButton: true,confirmButtonColor: '#3085d6',cancelButtonColor: '#d33',confirmButtonText: 'Yes, delete it!'
     })
     .then((result) => {
       if (result.isConfirmed) {
