@@ -1,5 +1,18 @@
+import { motion } from "framer-motion";
 const ExpenseCards = ({expenseData,handleRemove}) => {
-    {expenseData.map ( (expense) => {
+    //color css for different amount with dynamic changes
+    const color = amount => {
+        if (amount >= 1000){return("expense-cards big-red")}
+      else if(amount >= 600){return("expense-cards gold")}
+      else if(amount >= 450){return("expense-cards raddish")}
+      else if(amount >= 200){return("expense-cards purple")}
+      else if(amount >= 100){return("expense-cards mint")}
+      else if(amount >= 50){return("expense-cards grey")}
+      else if(amount >= 0){return("expense-cards")}
+    }
+    return(
+      <div className='contents'>
+      {expenseData.map ( (expense) => {
         const bgName = color(expense.amount)
         const { key, title, amount} = expense
           return (
@@ -16,13 +29,11 @@ const ExpenseCards = ({expenseData,handleRemove}) => {
         right: 1,
         bottom: 1,
         }}
-            
             className={bgName}key={key}>
               <div>
                 <h2>{title}</h2>
                 <p>${amount}</p>
                 <button 
-                // onClick={() => {handleRemove(key)}}
                 onClick={() => {handleRemove(key)}}
                 >
                 remove
@@ -31,5 +42,8 @@ const ExpenseCards = ({expenseData,handleRemove}) => {
             </motion.div>
           )
       })}
+  </div>
+    )
 }
+
 export default ExpenseCards;
