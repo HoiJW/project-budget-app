@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 // import firebase from './firebase';
 import { getDatabase, onValue, push, remove, ref} from 'firebase/database';
 
-const ExpenseCards = ({expenseData}) => {
+const ExpenseCards = ({expenseData,handleRemove}) => {
      //event listener for removing {expnese by id}
     //  const handleRemove = (expenseId) => {
     //     const database = getDatabase(firebase);
@@ -68,7 +68,7 @@ const ExpenseCards = ({expenseData}) => {
                 <h2>{title}</h2>
                 <p>${amount}</p>
                 <button 
-                // onClick={() => {handleRemove(key)}}
+                onClick={() => {handleRemove(key)}}
                 >
                 remove
                 </button>

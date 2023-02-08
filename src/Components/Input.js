@@ -20,24 +20,7 @@ const Input = () => {
       const handleBudget = (event) => {
         setUserBudget(event.target.validity.valid ? event.target.value :v);
       }
-      // const handleSubmit = (event) => {
-      //   //get the info from userinput STATE
-      //   event.preventDefault();
-      //   if (title === "") {
-      //     Swal.fire(
-      //       'No name item',
-      //       'An empty item has been submitted',
-      //       'info'
-      //     )
-      //   }
-      //   //send it off to firebase using push function
-      //   const database = getDatabase(firebase);
-      //   const dbRef = ref(database);
-      //   const expense = {userInput:userInput, title:title};
-      //   push(dbRef, expense);
-      //   setUserInput('');
-      //   setTitle('');
-      // }
+      
     
     return(
         <motion.div 
