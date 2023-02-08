@@ -5,18 +5,11 @@ html { box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
-
 body{
     background: rgb(0, 0, 0);
 }
-
 body,
 button,
 input{
     font-family: 'Shadows Into Light', cursive;
-}
-
-footer{
-    text-decoration: none;
-    font-size: 18px;
 }
