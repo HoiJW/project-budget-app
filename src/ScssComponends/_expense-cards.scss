@@ -14,8 +14,6 @@
     &:focus{
         box-shadow: rgba(3, 3, 3, 0.3) 2px 8px 8px -5px;
         transform: translate3d(1.1%);
-        scale: 1.03;
-      
     }
 }
 .big-red{
@@ -45,8 +43,7 @@
 }
 @media (max-width: 1200px) {
     .contents{
-        width: 75%;
-        
+        width: 75%;    
     }
     .adding-section{
         justify-content: space-between;
