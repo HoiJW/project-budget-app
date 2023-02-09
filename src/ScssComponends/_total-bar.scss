@@ -93,7 +93,7 @@
 }
 @media (max-width: 550px) {
     .total{
-        width: 70%;
+        width: 75%;
     }
     h3{
         width: 100%;
@@ -113,3 +113,21 @@
         
     }
   }
+
+@media (max-width: 440px){
+    .total{
+        width: 90%;
+    }
+    .green,
+    .yellow,
+    .red{
+        h3{
+            font-size: 2rem;
+        }
+        p,
+        .max{
+            font-size: 1.7rem;
+        }
+        
+    }
+}
