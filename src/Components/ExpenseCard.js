@@ -17,7 +17,8 @@ const ExpenseCards = ({expenseData,handleRemove}) => {
         const { key, title, amount} = expense
           return (
             <motion.div 
-            animate={{ scale: [0.7, 1.5, 1.3 ,1],
+            animate={{ 
+              // scale: [0.7, 1.5, 1.3 ,1],
               rotate: [0, -30, 30, 0],
               borderRadius: ["20%", "20%", "50%", "50%", "15px"] }}
             transition={{ duration: 0.4 }}
